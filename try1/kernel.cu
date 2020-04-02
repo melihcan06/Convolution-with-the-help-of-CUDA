@@ -43,4 +43,4 @@ void renklidenemepaddingvarr() {
 int main() {
     renklidenemepaddingvarr();
     return 0;
-}*/
+}
