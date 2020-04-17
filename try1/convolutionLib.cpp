@@ -147,7 +147,7 @@ unsigned char* resmeZeroPadding(unsigned char* resim, int* resimBoyutu, int* pad
 	return yeni;
 }
 
-int* esitlikIcýnPaddingHesabi(int* resimBoyutu, int* filtreBoyutu, int* kaydirma) {
+int* esitlikIcinPaddingHesabi(int* resimBoyutu, int* filtreBoyutu, int* kaydirma) {
 	int* yeni = (int*)malloc(sizeof(int) * 2);//yeni[0]=boy,yeni[1]=en	
 	yeni[0] = (((resimBoyutu[0] - 1) * kaydirma[0]) + filtreBoyutu[0] - resimBoyutu[0]) / 2;
 	yeni[1] = (((resimBoyutu[1] - 1) * kaydirma[1]) + filtreBoyutu[1] - resimBoyutu[1]) / 2;
@@ -191,7 +191,7 @@ unsigned char* konvolusyonGri(unsigned char* resim, float* filtre, int* resimBoy
 	int kanal = 1;//resimBoyutu[2];	
 
 	if (boyutAyniKalsin) {
-		padding = esitlikIcýnPaddingHesabi(resimBoyutu, filtreBoyutu, kaydirma);
+		padding = esitlikIcÃ½nPaddingHesabi(resimBoyutu, filtreBoyutu, kaydirma);
 		yeniBoyut[0] = resimBoyutu[0];//boy
 		yeniBoyut[1] = resimBoyutu[1];
 		yeniEn = yeniBoyut[1];
